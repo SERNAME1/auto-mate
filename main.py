@@ -5,12 +5,13 @@ from discord import DMChannel
 from messages import Messages
 from discord.ext import commands
 from keep_alive import keep_alive
+from dotenv import load_dotenv
 
 bot = commands.Bot(command_prefix=">")
 
-# Set up authorisation token and user id here
-TOKEN = ''
-USER_ID = ''
+load_dotenv()
+TOKEN = os.getenv('DISCORD_TOKEN')
+USER_ID = int(os.getenv('USER_ID'))
 
 # Set up timezone here; use -timedelta() for -UTC(s)
 UTC = +timedelta(hours=13)
