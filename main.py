@@ -1,4 +1,5 @@
 import asyncio
+import os
 from datetime import datetime, time, timedelta
 from discord.ext import commands
 from discord import DMChannel
